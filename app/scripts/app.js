@@ -15,8 +15,12 @@
                 url: '/album',
                 templateUrl: '/templates/album.html'
             })
+            .state('index', {
+                url: '/',
+                templateUrl: '/'
+            })
             .state('collection', {
-                url: '/album',
+                url: '/collection',
                 templateUrl: '/templates/collection.html'
             });
         
