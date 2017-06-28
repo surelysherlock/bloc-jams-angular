@@ -8,7 +8,7 @@
 
         $stateProvider
             .state('landing', {
-                url: '/',
+                url: '/landing',
                 templateUrl: '/templates/landing.html'
             })
             .state('album', {
@@ -16,8 +16,8 @@
                 templateUrl: '/templates/album.html'
             })
             .state('index', {
-                url: '/',
-                templateUrl: '/'
+                url: '/landing',
+                templateUrl: '/templates/landing.html'
             })
             .state('collection', {
                 url: '/collection',
