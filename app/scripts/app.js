@@ -12,20 +12,16 @@
                 controller: 'LandingCtrl as landing',
                 templateUrl: '/templates/landing.html'
             })
-            .state('collection', {
-                url: '/collection',
-                templateUrl: '/templates/collection.html'
-            })
-            .state('index', {
-                url: '/',
-                templateUrl: '/app/index.html'
-            })
             .state('album', {
                 url: '/album',
                 templateUrl: '/templates/album.html'
             })
+            .state('index', {
+                url: '/landing',
+                templateUrl: '/templates/landing.html'
+            })
             .state('collection', {
-                url: '/album',
+                url: '/',
                 controller: 'CollectionCtrl as collection',
                 templateUrl: '/templates/collection.html'
             });
