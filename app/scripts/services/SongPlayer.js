@@ -29,11 +29,16 @@
     currentSong = song;
  };
 
+/** plays the song if current song is not the song being played */
+
      SongPlayer.play = function(song) {
+         var playSong = function(song){
+            currentBuzzObject.play();
+            song.playing = true;
+         }
          if (currentSong !== song) {
              setSong(song);
-             currentBuzzObject.play();
-             song.playing = true;
+             playSong(song);
             
              } else if (currentSong === song) {
                 if (currentBuzzObject.isPaused()) {
@@ -42,6 +47,8 @@
              }  
     
      };
+
+/** Pauses the song  */
 
       SongPlayer.pause = function(song) {
         currentBuzzObject.pause();
