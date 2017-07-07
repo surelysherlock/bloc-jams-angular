@@ -6,6 +6,7 @@
      * @type {Number}
      */
      SongPlayer.currentTime = null;
+     SongPlayer.volume = null;
      function SongPlayer($rootScope, Fixtures) {
           var SongPlayer = {};
           var currentAlbum = Fixtures.getAlbum();
@@ -129,6 +130,12 @@
         SongPlayer.setCurrentTime = function(time) {
             if (currentBuzzObject) {
                 currentBuzzObject.setTime(time);
+            }
+        };
+
+        SongPlayer.setVolume = function(volume) {
+            if(currentBuzzObject) {
+                currentBuzzObject.setVolume(volume);
             }
         };
 
